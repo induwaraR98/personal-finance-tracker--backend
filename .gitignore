@@ -1,0 +1,25 @@
+# Node modules
+/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+
+# Dependency directories
+jspm_packages/
+
+# NPM package-lock
+package-lock.json
+
+# Yarn lock file
+yarn.lock
+
+# Build output
+/dist/
+/build/
+
+# IDE and Editor files
+.vscode/

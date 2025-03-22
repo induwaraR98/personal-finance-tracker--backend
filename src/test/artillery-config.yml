@@ -1,0 +1,23 @@
+# artillery-config.yml
+config:
+  target: 'http://localhost:5000' # Your API URL
+  phases:
+    - duration: 60  # Duration of the test in seconds
+      arrivalRate: 10  # Number of requests per second
+
+scenarios:
+  - flow:
+      - post:
+          url: '/api/transactions'
+          json:
+            type: 'expense'
+            amount: 100
+            currency: 'USD'
+            exchangeRate: 1
+            category: 'Food'
+            tags: ['groceries']
+            isRecurring: false
+            recurrencePattern: null
+            recurrenceEndDate: null
+      - get:
+          url: '/api/transactions'
